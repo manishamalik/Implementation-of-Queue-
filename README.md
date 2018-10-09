@@ -12,7 +12,10 @@ push an existing repository from the command line
 1.  git remote add origin http url
 2.  git push -u origin master
 
-QueueMain is the main file 
+QueueMain is the main file
+ 
 Queue.java : Implementation of Queue using circular java
+
 QueueUsingLinkedList.java: Implementation of Queue using Linked List
+
 SingleLinkedList: Implementation of Singly Linked list 
