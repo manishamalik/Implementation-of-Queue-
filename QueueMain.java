@@ -27,6 +27,14 @@ public class QueueMain {
         queue1.deQueue();
         queue1.enQueue(13);
         queue1.printQueue();
+//        ---------------------------ImplementStack-------------------------------
+        ImplementStack stack = new ImplementStack();
+        stack.push(12);
+        stack.push(15);
+        stack.push(18);
+        stack.push(2);
+        stack.pop();
+        stack.printStack();
 
     }
 
