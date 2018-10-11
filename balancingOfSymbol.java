@@ -51,11 +51,4 @@ public class BalancingOfSymbol {
             }
         }
     }
-//    public boolean isMachingPair(Character c,Character c1){
-//        if (c.equals(c1))
-//            return true;
-//        else
-//            return false;
-//
-//    }
 }

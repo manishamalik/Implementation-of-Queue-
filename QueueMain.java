@@ -44,7 +44,12 @@ public class QueueMain {
         else{
             System.out.println("it is not balanced");
         }
+//        -------------------------infix to postfix ---------------------------------
+        ImplementInfixToPostfixUsingStack infixToPostfix =new ImplementInfixToPostfixUsingStack();
+        String exp = "a+b*(c^d-e)^(f+g*h)-i";
+        String st= infixToPostfix.convertInfixToPostfix(exp);
 
+        System.out.println(st);
     }
 
 }
