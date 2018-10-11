@@ -2,7 +2,7 @@ package revisionQueue;
 
 public class QueueMain {
 
-    public static void main(String arg[])throws Exception{
+    public static void main(String arg[])throws Exception {
 //  -----------------------Implementation of queue using circular array--------------
 //        Queue queue =new Queue();
 //        queue.enQueue(12);
@@ -35,6 +35,15 @@ public class QueueMain {
         stack.push(2);
         stack.pop();
         stack.printStack();
+//        --------------------------- BalancingOfSymbol----------------------------
+        BalancingOfSymbol balancingOfSymbol = new BalancingOfSymbol();
+        boolean b= balancingOfSymbol.isBalance();
+        if(b){
+            System.out.println("it is balanced");
+        }
+        else{
+            System.out.println("it is not balanced");
+        }
 
     }
 

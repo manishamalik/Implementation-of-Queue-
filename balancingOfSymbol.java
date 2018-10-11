@@ -3,9 +3,9 @@ package revisionQueue;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class balancingOfSymbol {
+public class BalancingOfSymbol {
 
-    public static boolean main(String[] args) {
+    public boolean isBalance() {
         Stack<Character> stack =new Stack<Character>();
         Scanner scanner =new Scanner(System.in);
         System.out.println("Enter a string=");
@@ -14,20 +14,33 @@ public class balancingOfSymbol {
             return true;
         }
         else {
-            char c,c1;
             for(int i= 0 ; i<s.length(); i++){
-                c= s.charAt(i);
-                if(c=='}'|| c==')' || c==']'){
-                    if(stack.isEmpty()){
-                        return false;
+                if(s.charAt(i)==']'){
+                    if(!stack.isEmpty() && stack.peek()=='[') {
+                        stack.pop();
                     }
-                    c1= stack.pop();
-                    if (c!=c1){
+                    else{
                         return false;
                     }
                 }
-                else if(c=='{'|| c=='(' || c=='['){
-                    stack.push(c);
+                else if(s.charAt(i)=='}'){
+                    if(!stack.isEmpty() && stack.peek()=='{') {
+                        stack.pop();
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else if(s.charAt(i)==')'){
+                    if(!stack.isEmpty() && stack.peek()=='(') {
+                        stack.pop();
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else if(s.charAt(i)=='{'|| s.charAt(i)=='(' || s.charAt(i)=='['){
+                    stack.push(s.charAt(i));
                 }
             }
             if(stack.isEmpty()){
@@ -38,4 +51,11 @@ public class balancingOfSymbol {
             }
         }
     }
+//    public boolean isMachingPair(Character c,Character c1){
+//        if (c.equals(c1))
+//            return true;
+//        else
+//            return false;
+//
+//    }
 }
